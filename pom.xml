@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.positivity</groupId>
+    <artifactId>durion-positivity-sdk-java</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Durion Positivity Java SDK</name>
+    <description>Generated Java client SDK for the Durion Positivity backend APIs</description>
+
+    <modules>
+        <module>sdk-java-accounting</module>
+        <module>sdk-java-bulk-loader</module>
+        <module>sdk-java-catalog</module>
+        <module>sdk-java-customer</module>
+        <module>sdk-java-documents</module>
+        <module>sdk-java-event-receiver</module>
+        <module>sdk-java-image</module>
+        <module>sdk-java-inquiry</module>
+        <module>sdk-java-inventory</module>
+        <module>sdk-java-invoice</module>
+        <module>sdk-java-location</module>
+        <module>sdk-java-order</module>
+        <module>sdk-java-people</module>
+        <module>sdk-java-price</module>
+        <module>sdk-java-security</module>
+        <module>sdk-java-shop-manager</module>
+        <module>sdk-java-tax</module>
+        <module>sdk-java-vehicle-fitment</module>
+        <module>sdk-java-vehicle-inventory</module>
+        <module>sdk-java-workorder</module>
+    </modules>
+
+    <properties>
+        <java.version>25</java.version>
+        <maven.compiler.source>25</maven.compiler.source>
+        <maven.compiler.target>25</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <openapi-generator.version>7.5.0</openapi-generator.version>
+        <spring-boot.version>4.0.6</spring-boot.version>
+        <swagger-annotations.version>2.2.25</swagger-annotations.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>io.swagger.core.v3</groupId>
+                <artifactId>swagger-annotations</artifactId>
+                <version>${swagger-annotations.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.annotation</groupId>
+            <artifactId>jakarta.annotation-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.swagger.core.v3</groupId>
+            <artifactId>swagger-annotations</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.openapitools</groupId>
+                    <artifactId>openapi-generator-maven-plugin</artifactId>
+                    <version>${openapi-generator.version}</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
