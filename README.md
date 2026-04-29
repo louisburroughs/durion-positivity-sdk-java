@@ -4,38 +4,38 @@ Generated Java client SDK for the Durion Positivity backend APIs. Each module pr
 
 ## Requirements
 
-| Dependency | Version |
-|---|---|
-| Java | 25 |
-| Spring Boot | 4.0.6 |
-| Maven | 3.9+ |
+| Dependency  | Version |
+| ----------- | ------- |
+| Java        | 25      |
+| Spring Boot | 4.0.6   |
+| Maven       | 3.9+    |
 
 The `durion-positivity-backend` repository must be checked out as a sibling directory — module poms resolve OpenAPI specs via relative paths (`../../durion-positivity-backend/<module>/openapi.yaml`).
 
 ## Modules
 
-| Artifact | Package prefix | Backend spec |
-|---|---|---|
-| `sdk-java-accounting` | `com.positivity.sdk.accounting` | `pos-accounting/openapi.yaml` |
-| `sdk-java-bulk-loader` | `com.positivity.sdk.bulkloader` | `pos-bulk-loader/openapi.yaml` |
-| `sdk-java-catalog` | `com.positivity.sdk.catalog` | `pos-catalog/openapi.yaml` |
-| `sdk-java-customer` | `com.positivity.sdk.customer` | `pos-customer/openapi.yaml` |
-| `sdk-java-documents` | `com.positivity.sdk.documents` | `pos-documents/openapi.yaml` |
-| `sdk-java-event-receiver` | `com.positivity.sdk.eventreceiver` | `pos-event-receiver/openapi.yaml` |
-| `sdk-java-image` | `com.positivity.sdk.image` | `pos-image/openapi.yaml` |
-| `sdk-java-inquiry` | `com.positivity.sdk.inquiry` | `pos-inquiry/openapi.yaml` |
-| `sdk-java-inventory` | `com.positivity.sdk.inventory` | `pos-inventory/openapi.yaml` |
-| `sdk-java-invoice` | `com.positivity.sdk.invoice` | `pos-invoice/openapi.yaml` |
-| `sdk-java-location` | `com.positivity.sdk.location` | `pos-location/openapi.yaml` |
-| `sdk-java-order` | `com.positivity.sdk.order` | `pos-order/openapi.yaml` |
-| `sdk-java-people` | `com.positivity.sdk.people` | `pos-people/openapi.yaml` |
-| `sdk-java-price` | `com.positivity.sdk.price` | `pos-price/openapi.yaml` |
-| `sdk-java-security` | `com.positivity.sdk.security` | `pos-security/openapi.yaml` |
-| `sdk-java-shop-manager` | `com.positivity.sdk.shopmanager` | `pos-shop-manager/openapi.yaml` |
-| `sdk-java-tax` | `com.positivity.sdk.tax` | `pos-tax/openapi.yaml` |
-| `sdk-java-vehicle-fitment` | `com.positivity.sdk.vehiclefitment` | `pos-vehicle-fitment/openapi.yaml` |
+| Artifact                     | Package prefix                        | Backend spec                         |
+| ---------------------------- | ------------------------------------- | ------------------------------------ |
+| `sdk-java-accounting`        | `com.positivity.sdk.accounting`       | `pos-accounting/openapi.yaml`        |
+| `sdk-java-bulk-loader`       | `com.positivity.sdk.bulkloader`       | `pos-bulk-loader/openapi.yaml`       |
+| `sdk-java-catalog`           | `com.positivity.sdk.catalog`          | `pos-catalog/openapi.yaml`           |
+| `sdk-java-customer`          | `com.positivity.sdk.customer`         | `pos-customer/openapi.yaml`          |
+| `sdk-java-documents`         | `com.positivity.sdk.documents`        | `pos-documents/openapi.yaml`         |
+| `sdk-java-event-receiver`    | `com.positivity.sdk.eventreceiver`    | `pos-event-receiver/openapi.yaml`    |
+| `sdk-java-image`             | `com.positivity.sdk.image`            | `pos-image/openapi.yaml`             |
+| `sdk-java-inquiry`           | `com.positivity.sdk.inquiry`          | `pos-inquiry/openapi.yaml`           |
+| `sdk-java-inventory`         | `com.positivity.sdk.inventory`        | `pos-inventory/openapi.yaml`         |
+| `sdk-java-invoice`           | `com.positivity.sdk.invoice`          | `pos-invoice/openapi.yaml`           |
+| `sdk-java-location`          | `com.positivity.sdk.location`         | `pos-location/openapi.yaml`          |
+| `sdk-java-order`             | `com.positivity.sdk.order`            | `pos-order/openapi.yaml`             |
+| `sdk-java-people`            | `com.positivity.sdk.people`           | `pos-people/openapi.yaml`            |
+| `sdk-java-price`             | `com.positivity.sdk.price`            | `pos-price/openapi.yaml`             |
+| `sdk-java-security`          | `com.positivity.sdk.security`         | `pos-security/openapi.yaml`          |
+| `sdk-java-shop-manager`      | `com.positivity.sdk.shopmanager`      | `pos-shop-manager/openapi.yaml`      |
+| `sdk-java-tax`               | `com.positivity.sdk.tax`              | `pos-tax/openapi.yaml`               |
+| `sdk-java-vehicle-fitment`   | `com.positivity.sdk.vehiclefitment`   | `pos-vehicle-fitment/openapi.yaml`   |
 | `sdk-java-vehicle-inventory` | `com.positivity.sdk.vehicleinventory` | `pos-vehicle-inventory/openapi.yaml` |
-| `sdk-java-workorder` | `com.positivity.sdk.workorder` | `pos-workorder/openapi.yaml` |
+| `sdk-java-workorder`         | `com.positivity.sdk.workorder`        | `pos-workorder/openapi.yaml`         |
 
 Each module exposes two packages:
 
@@ -91,14 +91,14 @@ void configure() {
 
 All modules share a single parent POM at the repository root. Generation options applied across every module:
 
-| Option | Value |
-|---|---|
-| Generator | `java` (RestTemplate library) |
-| Jakarta EE | enabled (`useJakartaEe=true`) |
-| Nullable wrapper | disabled (`openApiNullable=false`) |
-| Date library | `java8` |
-| Serializable models | enabled |
-| Unknown enum default | enabled |
+| Option               | Value                              |
+| -------------------- | ---------------------------------- |
+| Generator            | `java` (RestTemplate library)      |
+| Jakarta EE           | enabled (`useJakartaEe=true`)      |
+| Nullable wrapper     | disabled (`openApiNullable=false`) |
+| Date library         | `java8`                            |
+| Serializable models  | enabled                            |
+| Unknown enum default | enabled                            |
 
 ### Custom ApiClient template
 
