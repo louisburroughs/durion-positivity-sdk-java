@@ -42,6 +42,8 @@
         <openapi-generator.version>7.14.0</openapi-generator.version>
         <spring-boot.version>4.0.6</spring-boot.version>
         <swagger-annotations.version>2.2.25</swagger-annotations.version>
+        <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
+        <palantir-java-format.version>2.90.0</palantir-java-format.version>
     </properties>
 
     <dependencyManagement>
@@ -99,7 +101,26 @@
                         <templateDirectory>${maven.multiModuleProjectDirectory}/templates</templateDirectory>
                     </configuration>
                 </plugin>
+                <plugin>
+                    <groupId>com.diffplug.spotless</groupId>
+                    <artifactId>spotless-maven-plugin</artifactId>
+                    <version>${spotless-maven-plugin.version}</version>
+                </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>com.diffplug.spotless</groupId>
+                <artifactId>spotless-maven-plugin</artifactId>
+                <configuration>
+                    <java>
+                        <palantirJavaFormat>
+                            <version>${palantir-java-format.version}</version>
+                        </palantirJavaFormat>
+                    </java>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>
