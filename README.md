@@ -58,6 +58,32 @@ mvn compile -pl sdk-java-workorder
 
 Code generation runs automatically during `compile` via the `openapi-generator-maven-plugin`. Generated sources are written to `<module>/target/generated-sources/openapi/`.
 
+## Code formatting
+
+Formatting is enforced by the [Spotless Maven plugin](https://github.com/diffplug/spotless) (v2.43.0) using [Palantir Java Format](https://github.com/palantir/palantir-java-format) (v2.90.0).
+
+Apply formatting to all modules:
+
+```bash
+mvn spotless:apply
+```
+
+Check formatting without modifying files (exits non-zero if any file is out of format):
+
+```bash
+mvn spotless:check
+```
+
+Scope either command to a single module with `-pl`:
+
+```bash
+mvn spotless:apply -pl sdk-java-workorder
+```
+
+`spotless:apply` is bound to the `process-sources` phase, so it runs automatically after code generation during any `mvn compile` (or later lifecycle goal). Generated sources under `target/generated-sources/` are formatted in the same pass as hand-written sources in `src/main/java/`.
+
+Run `spotless:check` in CI to reject unformatted code.
+
 ## Usage
 
 Add individual module dependencies to your `pom.xml`:
