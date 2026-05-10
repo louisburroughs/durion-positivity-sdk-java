@@ -1,0 +1,18 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "tmp-sdk-accounting-generate",
+			"type": "shell",
+			"command": "mvn",
+			"args": [
+				"-pl",
+				"sdk-java-accounting",
+				"-e",
+				"generate-sources"
+			],
+			"isBackground": false,
+			"group": "build"
+		}
+	]
+}

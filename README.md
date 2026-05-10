@@ -186,7 +186,7 @@ mvn clean generate-sources
 
 After generation, sources are available at:
 
-```
+```text
 sdk-java-<module>/
 └── target/
     └── generated-sources/
@@ -201,16 +201,18 @@ sdk-java-<module>/
 ### Prerequisites for generation
 
 - The `durion-positivity-backend` repository must be checked out as a sibling of this repository, since specs are resolved via relative paths:
-  ```
+
+  ```text
   parent-dir/
   ├── durion-positivity-sdk-java/   ← this repo
   └── durion-positivity-backend/    ← required sibling
   ```
+
 - Java 25 and Maven 3.9+ must be on `PATH`.
 
 ## Repository layout
 
-```
+```text
 durion-positivity-sdk-java/
 ├── pom.xml                         # parent POM — versions, shared deps, plugin management
 ├── templates/
