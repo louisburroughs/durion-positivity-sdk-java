@@ -27,14 +27,18 @@ The `durion-positivity-backend` repository must be checked out as a sibling dire
 | `sdk-java-inventory`         | `com.positivity.sdk.inventory`        | `pos-inventory/openapi.yaml`         |
 | `sdk-java-invoice`           | `com.positivity.sdk.invoice`          | `pos-invoice/openapi.yaml`           |
 | `sdk-java-location`          | `com.positivity.sdk.location`         | `pos-location/openapi.yaml`          |
+| `sdk-java-marketing`         | `com.positivity.sdk.marketing`        | `pos-marketing/openapi.yaml`         |
+| `sdk-java-mcp-server`        | `com.positivity.sdk.mcpserver`        | `pos-mcp-server/openapi.yaml`        |
 | `sdk-java-order`             | `com.positivity.sdk.order`            | `pos-order/openapi.yaml`             |
 | `sdk-java-people`            | `com.positivity.sdk.people`           | `pos-people/openapi.yaml`            |
+| `sdk-java-people-contact`    | `com.positivity.sdk.peoplecontact`    | `pos-people-contact/openapi.yaml`    |
 | `sdk-java-price`             | `com.positivity.sdk.price`            | `pos-price/openapi.yaml`             |
 | `sdk-java-security`          | `com.positivity.sdk.security`         | `pos-security/openapi.yaml`          |
 | `sdk-java-shop-manager`      | `com.positivity.sdk.shopmanager`      | `pos-shop-manager/openapi.yaml`      |
 | `sdk-java-tax`               | `com.positivity.sdk.tax`              | `pos-tax/openapi.yaml`               |
 | `sdk-java-vehicle-fitment`   | `com.positivity.sdk.vehiclefitment`   | `pos-vehicle-fitment/openapi.yaml`   |
 | `sdk-java-vehicle-inventory` | `com.positivity.sdk.vehicleinventory` | `pos-vehicle-inventory/openapi.yaml` |
+| `sdk-java-warranty`          | `com.positivity.sdk.warranty`         | `pos-warranty/openapi.yaml`          |
 | `sdk-java-workorder`         | `com.positivity.sdk.workorder`        | `pos-workorder/openapi.yaml`         |
 
 Each module exposes two packages:

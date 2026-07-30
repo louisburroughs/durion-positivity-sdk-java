@@ -22,14 +22,18 @@
         <module>sdk-java-inventory</module>
         <module>sdk-java-invoice</module>
         <module>sdk-java-location</module>
+        <module>sdk-java-marketing</module>
+        <module>sdk-java-mcp-server</module>
         <module>sdk-java-order</module>
         <module>sdk-java-people</module>
+        <module>sdk-java-people-contact</module>
         <module>sdk-java-price</module>
         <module>sdk-java-security</module>
         <module>sdk-java-shop-manager</module>
         <module>sdk-java-tax</module>
         <module>sdk-java-vehicle-fitment</module>
         <module>sdk-java-vehicle-inventory</module>
+        <module>sdk-java-warranty</module>
         <module>sdk-java-workorder</module>
     </modules>
 
@@ -39,7 +43,7 @@
         <maven.compiler.target>25</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <openapi-generator.version>7.14.0</openapi-generator.version>
-        <spring-boot.version>4.0.6</spring-boot.version>
+        <spring-boot.version>4.1.0</spring-boot.version>
         <swagger-annotations.version>2.2.25</swagger-annotations.version>
         <spotless-maven-plugin.version>2.43.0</spotless-maven-plugin.version>
         <palantir-java-format.version>2.90.0</palantir-java-format.version>
