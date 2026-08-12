@@ -30,6 +30,7 @@
         <module>sdk-java-price</module>
         <module>sdk-java-security</module>
         <module>sdk-java-shop-manager</module>
+        <module>sdk-java-supplier</module>
         <module>sdk-java-tax</module>
         <module>sdk-java-vehicle-fitment</module>
         <module>sdk-java-vehicle-inventory</module>

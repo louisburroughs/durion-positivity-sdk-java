@@ -35,6 +35,7 @@ The `durion-positivity-backend` repository must be checked out as a sibling dire
 | `sdk-java-price`             | `com.positivity.sdk.price`            | `pos-price/openapi.yaml`             |
 | `sdk-java-security`          | `com.positivity.sdk.security`         | `pos-security/openapi.yaml`          |
 | `sdk-java-shop-manager`      | `com.positivity.sdk.shopmanager`      | `pos-shop-manager/openapi.yaml`      |
+| `sdk-java-supplier`          | `com.positivity.sdk.supplier`         | `pos-supplier/openapi.yaml`          |
 | `sdk-java-tax`               | `com.positivity.sdk.tax`              | `pos-tax/openapi.yaml`               |
 | `sdk-java-vehicle-fitment`   | `com.positivity.sdk.vehiclefitment`   | `pos-vehicle-fitment/openapi.yaml`   |
 | `sdk-java-vehicle-inventory` | `com.positivity.sdk.vehicleinventory` | `pos-vehicle-inventory/openapi.yaml` |
