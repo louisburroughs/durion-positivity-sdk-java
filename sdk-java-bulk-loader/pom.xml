@@ -13,6 +13,14 @@
     <artifactId>sdk-java-bulk-loader</artifactId>
     <name>Durion Java SDK - Bulk Loader</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.positivity</groupId>
+            <artifactId>sdk-java-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

@@ -12,6 +12,14 @@
   <artifactId>sdk-java-people-contact</artifactId>
   <name>Durion Java SDK - People Contact</name>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.positivity</groupId>
+      <artifactId>sdk-java-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>

@@ -140,6 +140,14 @@ All modules share a single parent POM at the repository root. Generation options
 
 The override file is minimal — only `ApiClient.mustache` is customised; all other templates are sourced from the generator JAR.
 
+## Operation permission requirements
+
+Each module ships a generated `com.positivity.sdk.<domain>.OperationRequirements` class exposing an immutable `Map<String, OperationRequirement> BY_OPERATION_ID` (operationId -> `{anyOf, allOf, authenticated}`; the record lives in `sdk-java-core`). It is built from the backend spec's `x-required-permissions` extension (every code the authorization expression names; the single value `AUTHENTICATED` means any signed-in caller) and `x-required-permissions-all` (the subset that is each required): `allOf` = the `-all` list, `anyOf` = the codes minus `allOf` minus `AUTHENTICATED`.
+
+Produced by `python3 scripts/generate-operation-requirements.py` (needs PyYAML), which reads each module's `inputSpec` from its `pom.xml` and writes `<module>/src/main/java/.../OperationRequirements.java`, sorted by operationId. Unlike the OpenAPI sources, these files are committed: rerun the script after a spec change and commit the result. Test: `python3 -m unittest scripts/tests/test_generate_operation_requirements.py`.
+
+**Fail closed:** an operation whose spec has no `x-required-permissions` is deliberately absent from the map. Its requirements are unknown, so consumers must deny when a lookup misses, never allow.
+
 ## Generating and regenerating source code
 
 Source code is generated automatically by the `openapi-generator-maven-plugin` during the Maven `generate-sources` phase, which runs as part of `compile`. The plugin reads each module's configured OpenAPI spec and writes Java source files into `target/generated-sources/openapi/src/main/java/`.

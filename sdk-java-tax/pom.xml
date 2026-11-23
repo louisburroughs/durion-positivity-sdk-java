@@ -13,6 +13,14 @@
     <artifactId>sdk-java-tax</artifactId>
     <name>Durion Java SDK - Tax</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.positivity</groupId>
+            <artifactId>sdk-java-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
