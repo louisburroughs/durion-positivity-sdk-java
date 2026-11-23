@@ -13,6 +13,14 @@
     <artifactId>sdk-java-documents</artifactId>
     <name>Durion Java SDK - Documents</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.positivity</groupId>
+            <artifactId>sdk-java-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

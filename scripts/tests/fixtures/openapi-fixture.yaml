@@ -1,0 +1,18 @@
+openapi: 3.0.1
+info: {title: fixture, version: "1"}
+paths:
+  /v1/things:
+    get:
+      operationId: listThings
+      x-required-permissions: [thing:view, thing:admin]      # any-of (no -all)
+    post:
+      operationId: createThing
+      x-required-permissions: [thing:create, thing:audit, thing:approve]
+      x-required-permissions-all: [thing:create]             # allOf + remaining any-of
+  /v1/me:
+    get:
+      operationId: whoAmI
+      x-required-permissions: [AUTHENTICATED]                # sentinel
+  /v1/open:
+    get:
+      operationId: noExtension                               # unknown -> left out

@@ -13,6 +13,14 @@
     <artifactId>sdk-java-event-receiver</artifactId>
     <name>Durion Java SDK - Event Receiver</name>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.positivity</groupId>
+            <artifactId>sdk-java-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>

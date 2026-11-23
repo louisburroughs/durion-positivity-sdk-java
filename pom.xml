@@ -11,6 +11,7 @@
     <description>Generated Java client SDK for the Durion Positivity backend APIs</description>
 
     <modules>
+        <module>sdk-java-core</module>
         <module>sdk-java-accounting</module>
         <module>sdk-java-bulk-loader</module>
         <module>sdk-java-catalog</module>

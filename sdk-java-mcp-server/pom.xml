@@ -12,6 +12,14 @@
   <artifactId>sdk-java-mcp-server</artifactId>
   <name>Durion Java SDK - MCP Server</name>
 
+  <dependencies>
+    <dependency>
+      <groupId>com.positivity</groupId>
+      <artifactId>sdk-java-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+  </dependencies>
+
   <build>
     <plugins>
       <plugin>
